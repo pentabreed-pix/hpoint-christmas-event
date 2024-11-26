@@ -1,6 +1,6 @@
 {
-  "name": "pixstudy",
-  "description": "pix study git",
+  "name": "pix-hpoint-christmas-event",
+  "description": "pix-hpoint-christmas-event",
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
