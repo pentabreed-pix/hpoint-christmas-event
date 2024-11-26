@@ -11,9 +11,11 @@ H포인트 크리스마스 이벤트 페이지 웹 퍼블리싱
 
 
 
+
 ## Preview
 
 ![main](https://github.com/pentabreed-pix/hpoint-christmas-event/blob/main/src/assets/images/h-point-christmas/main.gif)
+
 
 
 

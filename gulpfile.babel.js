@@ -22,7 +22,6 @@ const SRC_PATH = {
         IMAGES: "./src/assets/images",
         SCSS: "./src/assets/scss",
         JS: "./src/assets/js",
-        MOVIES: "./src/assets/movies",
     },
     EJS: "./src/ejs",
   },
@@ -32,7 +31,6 @@ const SRC_PATH = {
         IMAGES: "./dist/assets/images",
         CSS: "./dist/assets/css",
         JS: "./dist/assets/js",
-        MOVIES: "./dist/assets/movies",
     },
   },
   // 옵션
@@ -130,13 +128,6 @@ gulp.task("fonts", () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task("movies", () => {
-  return gulp
-    .src(SRC_PATH.ASSETS.MOVIES + "/*")
-    .pipe(gulp.dest(DEST_PATH.ASSETS.MOVIES))
-    .pipe(browserSync.stream());
-});
-
 gulp.task("watch", function () {
   gulp.watch(SRC_PATH.EJS + "/**/*.ejs", gulp.series("ejs"));
   gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", gulp.series("scss:compile"));
@@ -144,7 +135,6 @@ gulp.task("watch", function () {
   gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", gulp.series("images"));
   gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg"));
   gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", gulp.series("fonts"));
-  gulp.watch(SRC_PATH.ASSETS.MOVIES + "/*", gulp.series("movies"));
 });
 
 gulp.task("browserSync", function () {
@@ -175,12 +165,12 @@ const prepare = gulp.series(clean);
 
 const build = gulp.series(
     prepare,
-    gulp.parallel("html", "ejs", "scss:compile", "js", "images", "svg", "fonts", "movies")
+    gulp.parallel("html", "ejs", "scss:compile", "js", "images", "svg", "fonts")
 );
 
 const buildProd = gulp.series(
     prepare,
-    gulp.parallel("html", "ejs-prod", "scss:compile", "js", "images", "svg", "fonts", "movies")
+    gulp.parallel("html", "ejs-prod", "scss:compile", "js", "images", "svg", "fonts")
 );
 
 function watchFiles() {
@@ -190,7 +180,6 @@ function watchFiles() {
     gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", gulp.series("images"));
     gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg"));
     gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", gulp.series("fonts"));
-    gulp.watch(SRC_PATH.ASSETS.MOVIES + "/*", gulp.series("movies"));
 }
 
 const defaultTask = gulp.series(clean, build, gulp.parallel("browserSync", watchFiles));
