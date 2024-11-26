@@ -79,7 +79,7 @@ gulp.task("ejs-prod", function () {
   return gulp
     .src([SRC_PATH.EJS + "/**/!(_)*.ejs", SRC_PATH.EJS + "/*.ejs"])
     .pipe(ejs({
-      DOCUMENT_ROOT: '/yonhapnews/'  // 배포 환경에서는 /yonhapnews/ 사용
+      DOCUMENT_ROOT: '/hpoint-christmas-event/'  // 배포 환경에서는 /hpoint-christmas-event/ 사용
     }))
     .pipe(rename({ extname: ".html" }))
     .pipe(htmlbeautify({ indentSize: 2 }))
