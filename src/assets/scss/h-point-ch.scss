@@ -1123,6 +1123,10 @@ button {
                         }
                         .modal-head {
                             width: 100%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
                             img {
                                 width: 100%;
                                 + .summary {
@@ -1134,6 +1138,7 @@ button {
                                 font-size: 3.733vw;
                                 line-height: 150%;
                                 text-align: center;
+                                position: relative;
                                 .accent {
                                     color: #F1D262;
                                     font-weight: 800;
@@ -1141,6 +1146,18 @@ button {
                                 }
                                 + .summary {
                                     margin-top: 4.266vw;
+                                    position: relative;
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 0.5vw;
+                                        right: -5vw;
+                                        width: 4.266vw;
+                                        height: 4.266vw;
+                                        padding: 1.466vw 0;
+                                        background: url(../../assets/images/h-point-christmas/para-type1-imoji.png) no-repeat center center;
+                                        background-size: contain;
+                                    }
                                 }
                             }
                             + .modal-figure {
