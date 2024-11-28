@@ -1500,7 +1500,7 @@ button {
   width: 100%;
   background: url(../../assets/images/h-point-christmas/modal-day-24-bg-d.png) no-repeat top center;
   background-size: cover;
-  padding-bottom: 7vw;
+  padding-bottom: 5.8333vw;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24::after {
   position: absolute;
@@ -1539,6 +1539,10 @@ button {
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head {
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head img {
   width: 100%;
@@ -1551,6 +1555,7 @@ button {
   font-size: 3.733vw;
   line-height: 150%;
   text-align: center;
+  position: relative;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head .summary .accent {
   color: #F1D262;
@@ -1559,6 +1564,18 @@ button {
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head .summary + .summary {
   margin-top: 4.266vw;
+  position: relative;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head .summary + .summary::after {
+  content: "";
+  position: absolute;
+  top: 0.5vw;
+  right: -5vw;
+  width: 4.266vw;
+  height: 4.266vw;
+  padding: 1.466vw 0;
+  background: url(../../assets/images/h-point-christmas/para-type1-imoji.png) no-repeat center center;
+  background-size: contain;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-head + .modal-figure {
   margin-top: 8vw;
@@ -1573,7 +1590,7 @@ button {
   transform: unset;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-figure + .modal-body {
-  margin-top: 9.066vw;
+  margin-top: 8vw;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-body {
   width: 74.666vw;
@@ -1602,7 +1619,7 @@ button {
   margin-top: 1.066vw;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.day-24 .modal-body + .modal-fuc {
-  margin-top: 6.4vw;
+  margin-top: 5.333vw;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.boom-popup .modal-figure {
   position: absolute;
@@ -1816,7 +1833,7 @@ button {
 .h-point-christmas .modal-display .modal .modal-inner .modal-area .modal-fuc .fuc-btn.type3 {
   display: flex;
   position: relative;
-  width: 83.733vw;
+  width: 83.866vw;
   height: 18.266vw;
   align-items: center;
   justify-content: center;
