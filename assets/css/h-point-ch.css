@@ -1022,7 +1022,21 @@ button {
   position: absolute;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.gift-box .modal-figure .figure-list .figure-item.item1 {
-  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 47.666vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 100%;
+}
+.h-point-christmas .modal-display .modal.design1 .modal-area.gift-box .modal-figure .figure-list .figure-item.item1 img {
+  width: 56vw;
+  height: auto;
+  position: absolute;
+  top: -4vw;
+  left: 48%;
+  transform: translateX(-50%);
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.gift-box .modal-figure .figure-list .figure-item.item1::after {
   position: absolute;
@@ -1044,7 +1058,7 @@ button {
   animation: swing-up-down2 4s infinite ease-in-out;
 }
 .h-point-christmas .modal-display .modal.design1 .modal-area.gift-box .modal-figure .figure-list .figure-item.item3 {
-  top: 41.6vw;
+  top: 44.6vw;
   right: 12vw;
   width: 12.266vw;
   animation: swing-up-down2 4s infinite ease-in-out;
